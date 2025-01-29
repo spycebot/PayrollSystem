@@ -1,0 +1,8 @@
+.vs/
+PayrollSystem/PayrollSystem.csproj
+PayrollSystem/PayrollSystem.csproj.user
+PayrollSystem/Properties/
+PayrollSystem/app.config
+PayrollSystem/bin/
+PayrollSystem/obj/
+.gitignore.bak
