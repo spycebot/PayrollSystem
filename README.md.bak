@@ -18,10 +18,6 @@ Modify the ToString() method in class Employee to include the new properties.
 
 ### Data
 
-[UML]
-
 ### Analysis
 
 ### Discussion
-
-Derived class objects may be assigned to base class variables, and base class objects cannot be assigned to derived class variables.

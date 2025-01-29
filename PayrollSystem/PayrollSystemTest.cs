@@ -20,6 +20,10 @@ class PayrollSystemTest
          new BasePlusCommissionEmployee("Bob", "Lewis",
          "444-44-4444", 5000.00M, .04M, 300.00M);
 
+        Date testDateTime = new Date(7,7,7);
+
+        Console.WriteLine($"Test Date: {testDateTime}");
+
       Console.WriteLine("Employees processed individually:\n");
 
       Console.WriteLine($"{salariedEmployee}\nearned: " +
