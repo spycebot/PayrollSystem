@@ -9,9 +9,9 @@ public class HourlyEmployee : Employee
 
    // five-parameter constructor
    public HourlyEmployee(string firstName, string lastName,
-      string socialSecurityNumber, decimal hourlyWage,
+      string socialSecurityNumber, Date birthDate, decimal hourlyWage,
       decimal hoursWorked)
-      : base(firstName, lastName, socialSecurityNumber)
+      : base(firstName, lastName, socialSecurityNumber, birthDate)
    {
       Wage = hourlyWage; // validate hourly wage 
       Hours = hoursWorked; // validate hours worked 

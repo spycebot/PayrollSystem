@@ -8,17 +8,21 @@ class PayrollSystemTest
    static void Main()
    {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-      //  var emp1 = new Employee("Hemomgwau", "FRance", "132163546");
-      // create derived-class objects
+        //  var emp1 = new Employee("Hemomgwau", "FRance", "132163546");
+        // create derived-class objects
+      Date salariedEmployeeDate = new Date(01, 07, 1942);
       var salariedEmployee = new SalariedEmployee("John", "Smith",
-          "111-11-1111", 800.00M);
-      var hourlyEmployee = new HourlyEmployee("Karen", "Price",
-         "222-22-2222", 16.75M, 40.0M);
-      var commissionEmployee = new CommissionEmployee("Sue", "Jones",
-         "333-33-3333", 10000.00M, .06M);
-      var basePlusCommissionEmployee =
+          "111-11-1111", salariedEmployeeDate, 800.00M);
+        Date hourlyEmployeeDate = new Date(07, 01, 1972);
+        var hourlyEmployee = new HourlyEmployee("Karen", "Price",
+         "222-22-2222", hourlyEmployeeDate, 16.75M, 40.0M);
+        Date commissionEmployeeDate = new Date(08, 31, 1927);
+        var commissionEmployee = new CommissionEmployee("Sue", "Jones",
+         "333-33-3333", commissionEmployeeDate, 10000.00M, .06M);
+        Date basePlusCommissionEmployeeDate = new Date(12, 25, 2001);
+        var basePlusCommissionEmployee =
          new BasePlusCommissionEmployee("Bob", "Lewis",
-         "444-44-4444", 5000.00M, .04M, 300.00M);
+         "444-44-4444", basePlusCommissionEmployeeDate, 5000.00M, .04M, 300.00M);
 
         Date testDateTime = new Date(7,7,7);
 
