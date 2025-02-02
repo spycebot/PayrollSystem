@@ -77,7 +77,28 @@ class PayrollSystemTest
 
         Console.WriteLine("==========\nAssignment 3 Polymorphic Payroll System Modification\n==========");
 
-        Console.WriteLine("Monthy Payroll Calculation:");
+        Console.WriteLine("Monthy Payroll Calculation");
+
+        Console.WriteLine($"Today's date is {DateTime.Now}");
+
+        int monthSelection = 0;
+        while (monthSelection == 0)
+        {
+            Console.Write("Enter the month for which to run payroll: ");
+            String userInput = Console.ReadLine();
+            if (int.Parse(userInput) > 0 && int.Parse(userInput) < 12)
+            {
+                monthSelection = int.Parse(userInput);
+            }
+            else if (int.Parse(userInput) == -1)
+            {
+                monthSelection = -1;
+            }
+            else
+            {
+                monthSelection = 0;
+            }
+        }
 
         Employee[] employeesArray = new Employee[] {salariedEmployee,
          hourlyEmployee, commissionEmployee, basePlusCommissionEmployee};
@@ -86,18 +107,27 @@ class PayrollSystemTest
         {
             decimal monthlyEarnings = 0;
 
-            Console.WriteLine($"Employee {k} ({employeesArray[k].GetType()}): {employeesArray[k].Earnings():C}");
+            //Console.WriteLine($"Employee {k} ({employeesArray[k].GetType()}): {employeesArray[k].Earnings():C}");
+            Console.WriteLine($"==========\nEmployee {k} ({employeesArray[k].GetType()}): {employeesArray[k]}");
             //Console.WriteLine($""
+            Date employeeBirthDate = employeesArray[k].BirthDate;
             if (employeesArray[k] is HourlyEmployee || employeesArray[k] is SalariedEmployee)
             {
                 monthlyEarnings = 4 * employeesArray[k].Earnings();
-            } else if (employeesArray[k] is CommissionEmployee || employeesArray[k] is BasePlusCommissionEmployee)
+            }
+            else if (employeesArray[k] is CommissionEmployee || employeesArray[k] is BasePlusCommissionEmployee)
             {
                 monthlyEarnings = employeesArray[k].Earnings();
+            }
+            if (employeeBirthDate.Month == monthSelection)
+            {
+                monthlyEarnings += 100;
+                Console.WriteLine("Birthday bonus given!");
             }
 
 
             Console.WriteLine($"Employee {k} ({employeesArray[k].GetType()}) monthly earnings: {monthlyEarnings:C}");
+
         }
     }
 }
