@@ -71,7 +71,18 @@ class PayrollSystemTest
          Console.WriteLine(
             $"Employee {j} is a {employees[j].GetType()}");
       }
-   }
+
+        Console.WriteLine("==========\nAssignment 3 Polymorphic Payroll System Modification\n==========");
+
+        Employee[] employeesArray = new Employee[] {salariedEmployee,
+         hourlyEmployee, commissionEmployee, basePlusCommissionEmployee};
+        
+        for (int k = 0; k < employeesArray.Length; k++)
+        {
+            Console.WriteLine(
+               $"Employee {k} is a {employees[k].GetType()}");
+        }
+    }
 }
 
 
