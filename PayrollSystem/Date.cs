@@ -1,6 +1,7 @@
 ﻿// Fig. 10.7: Date.cs 
 // Date class declaration.
 using System;
+using System.Net.NetworkInformation;
 
 public class Date
 {
@@ -8,18 +9,19 @@ public class Date
    private int day; // 1-31 based on month
    public int Year { get; private set; } // auto-implemented property Year
 
-   // constructor: use property Month to confirm proper value for month; 
-   // use property Day to confirm proper value for day
-   public Date(int month, int day, int year)
-   {
-      Month = month; // validates month
-      Year = year; // could validate year
-      Day = day; // validates day
-      Console.WriteLine($"Date object constructor for date {this}");
-   }
+    // constructor: use property Month to confirm proper value for month; 
+    // use property Day to confirm proper value for day
 
-   // property that gets and sets the month
-   public int Month
+    public Date(int month, int day, int year)
+    {
+        Month = month; // validates month
+        Year = year; // could validate year
+        Day = day; // validates day
+        Console.WriteLine($"Date object constructor for date {this}");
+    }
+
+    // property that gets and sets the month
+    public int Month
    {
       get
       {

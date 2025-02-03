@@ -8,10 +8,10 @@ public class HourlyEmployee : Employee
    private decimal hours; // hours worked for the week
 
    // five-parameter constructor
-   public HourlyEmployee(string firstName, string lastName,
-      string socialSecurityNumber, Date birthDate, decimal hourlyWage,
+   public HourlyEmployee(string firstName, string lastName, string homeAddress, string phoneNumber,
+      string birthDate, string socialSecurityNumber, string email, decimal hourlyWage,
       decimal hoursWorked)
-      : base(firstName, lastName, socialSecurityNumber, birthDate)
+      : base(firstName, lastName, homeAddress, phoneNumber, birthDate, socialSecurityNumber, email)
    {
       Wage = hourlyWage; // validate hourly wage 
       Hours = hoursWorked; // validate hours worked 

@@ -7,10 +7,10 @@ public class BasePlusCommissionEmployee : CommissionEmployee
    private decimal baseSalary; // base salary per week
 
    // six-parameter constructor
-   public BasePlusCommissionEmployee(string firstName, string lastName,
-      string socialSecurityNumber, Date birthDate, decimal grossSales,
-      decimal commissionRate, decimal baseSalary)
-      : base(firstName, lastName, socialSecurityNumber, birthDate,
+   public BasePlusCommissionEmployee(string firstName, string lastName, string homeAddress, string phoneNumber,
+      string birthDate, string socialSecurityNumber, string email, 
+      decimal grossSales, decimal commissionRate, decimal baseSalary)
+      : base(firstName, lastName, homeAddress, phoneNumber, birthDate, socialSecurityNumber, email,
            grossSales, commissionRate)
    {
       BaseSalary = baseSalary; // validates base salary

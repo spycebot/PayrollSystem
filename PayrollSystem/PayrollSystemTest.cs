@@ -10,6 +10,7 @@ class PayrollSystemTest
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         //  var emp1 = new Employee("Hemomgwau", "FRance", "132163546");
         // create derived-class objects
+        /*
         Date salariedEmployeeDate = new Date(01, 07, 1942);
         var salariedEmployee = new SalariedEmployee("John", "Smith",
             "111-11-1111", salariedEmployeeDate, 800.00M);
@@ -23,12 +24,18 @@ class PayrollSystemTest
         var basePlusCommissionEmployee =
          new BasePlusCommissionEmployee("Bob", "Lewis",
          "444-44-4444", basePlusCommissionEmployeeDate, 5000.00M, .04M, 300.00M);
+        */
 
+        var salariedEmployee = new SalariedEmployee("John", "Smith", "1 SeaviewLane", "0871234567", "10 / 1 / 1990", "111 - 11 - 1111",  "photius@shannonware.com", 800.00M);
+        var hourlyEmployee = new HourlyEmployee("Karen", "Price", "11 Lakeside Avenue", "0862345678", "14 / 07 / 1985", "222 - 22 - 2222", "photius@shannonware.com", 16.75M, 40.0M);
+        var commissionEmployee = new CommissionEmployee("Sue", "Jones", "21 Mountainview Road", "0853456789", "21 / 08 / 1979", "333 - 33 - 3333", "photius@shannonware.com", 10000.00M, .06M);
+        var basePlusCommissionEmployee = new BasePlusCommissionEmployee("Bob", "Lewis", "31 Mill Cresent", "0894567890", "31/12/1989", "444-44-4444", "photius@shannonware.com", 5000.00M, .04M, 300.00M);
+
+
+        /*
         Date testDateTime = new Date(7, 7, 7);
 
         Console.WriteLine($"Test Date: {testDateTime}");
-
-        /*
 
         Console.WriteLine("Employees processed individually:\n");
 

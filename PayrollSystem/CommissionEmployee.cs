@@ -1,6 +1,7 @@
 ﻿// Fig. 12.7: CommissionEmployee.cs
 // CommissionEmployee class that extends Employee.
 using System;
+using System.Net.NetworkInformation;
 
 public class CommissionEmployee : Employee
 {
@@ -9,9 +10,9 @@ public class CommissionEmployee : Employee
 
    // five-parameter constructor
    public CommissionEmployee(string firstName, string lastName,
-      string socialSecurityNumber, Date birthDate, decimal grossSales,
-      decimal commissionRate)
-      : base(firstName, lastName, socialSecurityNumber, birthDate)
+      string homeAddress, string phoneNumber,
+      string birthDate, string socialSecurityNumber, string email, decimal grossSales, decimal commissionRate)
+      : base(firstName, lastName, homeAddress, phoneNumber, birthDate, socialSecurityNumber, email)
    {
       GrossSales = grossSales; // validates gross sales
       CommissionRate = commissionRate; // validates commission rate

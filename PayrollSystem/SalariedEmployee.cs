@@ -7,9 +7,9 @@ public class SalariedEmployee : Employee
    private decimal weeklySalary;
 
    // four-parameter constructor
-   public SalariedEmployee(string firstName, string lastName,
-      string socialSecurityNumber, Date birthDate, decimal weeklySalary)
-      : base(firstName, lastName, socialSecurityNumber, birthDate)
+   public SalariedEmployee(string firstName, string lastName, string homeAddress, string phoneNumber,
+      string birthDate, string socialSecurityNumber, string email, decimal weeklySalary)
+      : base(firstName, lastName, homeAddress, phoneNumber, birthDate, socialSecurityNumber, email)
    {
       WeeklySalary = weeklySalary; // validate salary via property
    }
@@ -26,7 +26,7 @@ public class SalariedEmployee : Employee
          if (value < 0) // validation
          {
             throw new ArgumentOutOfRangeException(nameof(value),
-               value, $"{nameof(WeeklySalary)} must be >= 0");
+               value, $"{nameof(WeeklySalary)} must be >= 0") ;
          }
 
          weeklySalary = value;
