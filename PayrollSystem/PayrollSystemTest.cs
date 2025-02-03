@@ -93,13 +93,15 @@ class PayrollSystemTest
         {
             Console.Write("Enter the month for which to run payroll: ");
             String userInput = Console.ReadLine();
-            if (int.Parse(userInput) > 0 && int.Parse(userInput) < 12)
+            if (int.Parse(userInput) > 0 && int.Parse(userInput) <= 12)
             {
                 monthSelection = int.Parse(userInput);
             }
             else if (int.Parse(userInput) == -1)
             {
                 monthSelection = -1;
+                Console.WriteLine("Exiting PayrollSystem.");
+                return;
             }
             else
             {
@@ -128,8 +130,9 @@ class PayrollSystemTest
             }
             if (employeeBirthDate.Month == monthSelection)
             {
-                monthlyEarnings += 100;
                 Console.WriteLine("Birthday bonus given!");
+                Console.WriteLine($"Monthly earnings before bonus: {monthlyEarnings:C}");
+                monthlyEarnings += 100;
             }
 
 

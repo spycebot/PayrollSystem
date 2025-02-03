@@ -63,21 +63,23 @@ public class CommissionEmployee : Employee
    public override string ToString() =>
       $"commission employee: {base.ToString()}\n" +
       $"gross sales: {GrossSales:C}\n" +
-      $"commission rate: {CommissionRate:F2}";
+      $"commission rate: {CommissionRate:F2}\n" +
+      $"commission value: {(CommissionRate * GrossSales):C}";
 }
 
 
-  
-                 
-                             
-                                                                         
-       
-              
-            
-          
-    
-     
-          
-          
-                         
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
