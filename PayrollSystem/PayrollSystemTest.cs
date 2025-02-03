@@ -131,7 +131,8 @@ class PayrollSystemTest
             Date employeeBirthDate = employeesArray[k].BirthDate;
             if (employeesArray[k] is HourlyEmployee || employeesArray[k] is SalariedEmployee)
             {
-                monthlyEarnings = 4 * employeesArray[k].Earnings();
+                // (weekly x 52) / 12 is more accurante than weekly x 4, an 8.3% difference.
+                monthlyEarnings = (52 * employeesArray[k].Earnings()) / 12;
             }
             else if (employeesArray[k] is CommissionEmployee || employeesArray[k] is BasePlusCommissionEmployee)
             {
