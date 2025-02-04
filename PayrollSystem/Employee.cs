@@ -9,10 +9,15 @@ public abstract class Employee
    public string LastName { get; }
    public string SocialSecurityNumber { get; }
 
-    public Date BirthDate {  get; }
+    // Task 1 [+]: ... to include private instance variable birthDate in class Employee. 
+    // Task 2 [+]: Use the class Date of Fig. 10.7 to represent an employee’s birthday. 
+    private Date BirthDate {  get; }
 
+    // Task 7 [+]: Add properties to the class Employee to represent an employee’s home address, 
     public string HomeAddress { get; }
+    // Task 8 [+]: ...email,
     public string Email { get; }
+    // Task 9 [+]: ...and phone number.
     public string PhoneNumber { get; }
 
     // three-parameter constructor
@@ -41,7 +46,13 @@ public abstract class Employee
         return outputDate;
     }
 
+    public Date GetDate()
+    {
+        return BirthDate;
+    }
+
     // return string representation of Employee object, using properties
+    // Task 12 [+]: Modify the ToString() method in class Employee to include the new properties.
     public override string ToString() => $"{FirstName} {LastName}\n" +
       $"social security number: {SocialSecurityNumber}\n" +
       $"birth date (M/D/Y): {BirthDate}\n" +

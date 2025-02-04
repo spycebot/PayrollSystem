@@ -2,12 +2,15 @@
 // Employee hierarchy test app.
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 class PayrollSystemTest
 {
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
+        // Task 1 [+]: Modify the payroll system of Figs. 12.4–12.9...
+
         //  var emp1 = new Employee("Hemomgwau", "FRance", "132163546");
         // create derived-class objects
         /*
@@ -119,6 +122,7 @@ class PayrollSystemTest
             }
         }
 
+        // Task 3 [+]: Create an array of Employee variables to store references to the various employee objects. 
         Employee[] employeesArray = new Employee[] {salariedEmployee,
          hourlyEmployee, commissionEmployee, basePlusCommissionEmployee};
 
@@ -128,7 +132,8 @@ class PayrollSystemTest
 
             //Console.WriteLine($"Employee {k} ({employeesArray[k].GetType()}): {employeesArray[k].Earnings():C}");
             Console.WriteLine($"==========\nEmployee {k} ({employeesArray[k].GetType()}):\n{employeesArray[k]}");
-            Date employeeBirthDate = employeesArray[k].BirthDate;
+            Date employeeBirthDate = employeesArray[k].GetDate();
+            // Task 4 [+]: In a loop, calculate the payroll for each Employee (polymorphically) 
             if (employeesArray[k] is HourlyEmployee || employeesArray[k] is SalariedEmployee)
             {
                 // (weekly x 52) / 12 is more accurante than weekly x 4, an 8.3% difference.
@@ -138,10 +143,12 @@ class PayrollSystemTest
             {
                 monthlyEarnings = employeesArray[k].Earnings();
             }
+            // Task 6 [+]: if the current month is the month in which the Employee’s birthday occurs.
             if (employeeBirthDate.Month == monthSelection)
             {
                 Console.WriteLine("Birthday bonus given!");
                 Console.WriteLine($"Monthly earnings before bonus: {monthlyEarnings:C}");
+                // Task 5[+]: and add a €100.00 bonus to the person’s payroll amount(total earnings)
                 monthlyEarnings += 100;
             }
 

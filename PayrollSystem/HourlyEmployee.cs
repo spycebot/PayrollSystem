@@ -7,8 +7,9 @@ public class HourlyEmployee : Employee
    private decimal wage; // wage per hour
    private decimal hours; // hours worked for the week
 
-   // five-parameter constructor
-   public HourlyEmployee(string firstName, string lastName, string homeAddress, string phoneNumber,
+    // five-parameter constructor
+    // Task 10 [+]: Modify the employee concrete classes so that new employee objects are assigned values for the new properties 
+    public HourlyEmployee(string firstName, string lastName, string homeAddress, string phoneNumber,
       string birthDate, string socialSecurityNumber, string email, decimal hourlyWage,
       decimal hoursWorked)
       : base(firstName, lastName, homeAddress, phoneNumber, birthDate, socialSecurityNumber, email)

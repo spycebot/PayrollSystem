@@ -27,4 +27,4 @@ Task 12 [+]: Modify the ToString() method in class Employee to include the new p
 
 - Calculation of monthly salary for hourly employees who are paid weekly. 
 - Salaried employees internal earnings calculation is on a weekly basis
-- (weekly x 52) / 12 is more accurante than weekly x 4
+- (weekly x 52) / 12 is more accurante than weekly x 4, an 8.3% difference.
